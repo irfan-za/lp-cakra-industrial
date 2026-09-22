@@ -1,0 +1,98 @@
+/* Hallmark · macrostructure: Product-led corporate reveal · tone: darkroom editorial · anchor hue: ember orange
+ * theme: studied-DNA (source: user-supplied ORYZO design guide) · paper: #100904 · accent: #dc5000
+ * display/body: geometric grotesque (Inter fallback) · labels: uppercase grotesque
+ * Hallmark pre-emit critique: P5 H4 E5 S5 R5 V4
+ */
+
+@import "tailwindcss";
+@import "./tokens.css";
+
+@theme {
+  --color-walnut: var(--color-walnut-shadow);
+  --color-bark: var(--color-bark-brown);
+  --color-cork: var(--color-cork-border);
+  --color-drift: var(--color-driftwood);
+  --color-cream: var(--color-warm-cream);
+  --color-ember: var(--color-ember-accent);
+  --font-display: var(--font-halyard-display-variable);
+  --font-legal: var(--font-arial);
+}
+
+@layer base {
+  html,
+  body {
+    overflow-x: clip;
+    background: var(--color-walnut-shadow);
+    color: var(--color-warm-cream);
+    font-family: var(--font-halyard-display-variable);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 320px;
+  }
+
+  * {
+    border-color: var(--color-cork-border);
+  }
+
+  ::selection {
+    background: var(--color-ember-accent);
+    color: var(--color-warm-cream);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-warm-cream);
+    outline-offset: 4px;
+  }
+}
+
+@layer utilities {
+  .copy-wrap {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .ui-label {
+    font-size: clamp(0.68rem, 0.72vw, 0.82rem);
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .display-lockup {
+    font-size: clamp(4.3rem, 15.1vw, 14.2rem);
+    font-weight: 500;
+    line-height: 0.78;
+    text-transform: uppercase;
+  }
+
+  .dash-rule {
+    border-top: 1px dashed var(--color-cork-border);
+  }
+
+  .ink-image {
+    filter: saturate(0.55) contrast(1.06) brightness(0.74) sepia(0.14);
+  }
+
+  .link-ember {
+    color: var(--color-ember-accent);
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

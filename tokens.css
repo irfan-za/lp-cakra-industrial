@@ -1,0 +1,18 @@
+:root {
+  --color-warm-cream: #ffedd7;
+  --color-walnut-shadow: #100904;
+  --color-bark-brown: #382416;
+  --color-cork-border: #40372e;
+  --color-driftwood: #6c5f51;
+  --color-ember-accent: #dc5000;
+  --font-halyard-display-variable: Inter, Arial, sans-serif;
+  --font-arial: Arial, system-ui, sans-serif;
+  --space-sm: 8px;
+  --space-md: 18px;
+  --space-lg: 41px;
+  --space-xl: 68px;
+  --radius-card: 12px;
+  --radius-outline: 22.5px;
+  --radius-pill: 36px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
